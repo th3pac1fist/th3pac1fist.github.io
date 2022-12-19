@@ -2,85 +2,57 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>User Interface</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Rainbow Bow Story</title>
   <style>
     /* Add your CSS styles here */
+    * {
+      box-sizing: border-box;
+    }
     body {
       font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
     }
-    header {
-      background-color: lightblue;
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
       padding: 20px;
-      text-align: center;
     }
     h1 {
-      margin: 0;
-      font-size: 24px;
-      color: white;
+      text-align: center;
+      margin-bottom: 20px;
+      font-size: 32px;
+      color: purple;
     }
-    nav {
-      background-color: lightgray;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 0 20px;
+    p {
+      font-size: 18px;
+      line-height: 1.5;
+      margin-bottom: 20px;
     }
-    nav ul {
-      list-style: none;
-      margin: 0;
-      padding: 0;
-      display: flex;
-    }
-    nav li {
-      margin: 0 10px;
-    }
-    nav a {
-      text-decoration: none;
-      color: black;
-    }
-    main {
-      padding: 20px;
-    }
-    .container {
-      max-width: 1200px;
+    img {
+      max-width: 100%;
+      display: block;
       margin: 0 auto;
-      display: flex;
-      justify-content: space-between;
-    }
-    .sidebar {
-      width: 300px;
-    }
-    .content {
-      flex: 1;
     }
   </style>
 </head>
 <body>
-  <header>
-    <h1>User Interface</h1>
-  </header>
-  <nav>
-    <ul>
-      <li><a href="#">Home</a></li>
-      <li><a href="#">About</a></li>
-      <li><a href="#">Contact</a></li>
-    </ul>
-    <form action="#">
-      <input type="text" placeholder="Search...">
-      <button type="submit">Go</button>
-    </form>
-  </nav>
-  <main>
-    <div class="container">
-      <div class="sidebar">
-        <!-- Add your sidebar content here -->
-      </div>
-      <div class="content">
-        <!-- Add your main content here -->
-      </div>
-    </div>
-  </main>
+  <div class="container">
+    <h1>The Rainbow Bow</h1>
+    <p>
+      Once upon a time, there was a beautiful rainbow bow that lived in the sky. It was made up of all the colors of the rainbow, and it shone brightly whenever the sun was out. The rainbow bow was very happy living in the sky, but it always wished it could come down to earth and see the world.
+    </p>
+    <p>
+      One day, the rainbow bow's wish came true. A strong wind blew it down from the sky and it landed in a field of flowers. The rainbow bow was so excited to be on earth that it ran around and explored everything it could. It chased butterflies, played with the birds, and even had a picnic with some friendly rabbits.
+    </p>
+    <p>
+      The rainbow bow had the best day of its life, and it didn't want to leave the earth. But eventually, the sun started to set and the rainbow bow knew it had to go back to the sky. It said goodbye to all its new friends and flew back up to the clouds.
+    </p>
+    <p>
+      From then on, the rainbow bow made sure to visit the earth every chance it got. It always had the most wonderful adventures and made so many new friends. And the people who saw the rainbow bow always felt a little bit happier and more hopeful because of it.
+    </p>
+    <img src="rainbow-bow.jpg" alt="A rainbow bow">
+  </div>
 </body>
 </html>
