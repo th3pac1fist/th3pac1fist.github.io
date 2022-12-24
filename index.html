@@ -132,6 +132,43 @@
 										<label for="uniquehandle">Unique Handle</label>
 										<input type="text" name="uniquehandle" id="uniquehandle" />
 									</div>
+									<button onclick="generateHandle()">Generate handle</button>
+  									<div id="handle"></div>
+									<script>
+									function generateHandle() {
+										// List of possible animals to use in the handle
+										const animals = ['panda', 'monkey', 'tiger', 'lion', 'unicorn', 'dragon', 'giraffe'];
+										
+										// Generate a random handle using a random animal and a randomly generated word
+										const handle = generateRandomWord() + '_' + animals[Math.floor(Math.random() * animals.length)];
+										
+										// Display the handle in the page
+										document.getElementById('handle').innerHTML = handle;
+									}
+									
+									// Generates a random word by combining random consonants and vowels
+									function generateRandomWord() {
+										// List of consonants and vowels to use for generating the word
+										const consonants = 'bcdfghjklmnpqrstvwxyz';
+										const vowels = 'aeiou';
+										
+										// Initialize the word as an empty string
+										let word = '';
+										
+										// Generate a random word by alternating between consonants and vowels
+										for (let i = 0; i < 8; i++) {
+										if (i % 2 == 0) {
+											// Add a random consonant to the word
+											word += consonants[Math.floor(Math.random() * consonants.length)];
+										} else {
+											// Add a random vowel to the word
+											word += vowels[Math.floor(Math.random() * vowels.length)];
+										}
+										}
+										
+										return word;
+									}
+									</script>									  
 									<div class="field">
 										<label for="message">Message</label>
 										<textarea type="text" name="message"id="message" rows="4"></textarea>
@@ -141,6 +178,7 @@
 										<li><input type="reset" value="Reset" /></li>
 									</ul>
 								</form>
+
 								<ul class="icons">
 									<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
 									<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
