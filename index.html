@@ -174,12 +174,17 @@
 										<textarea type="text" name="message"id="message" rows="4"></textarea>
 
 									</div>
+									
+									<div class="field half first" id="handle"></div>
 									<ul class="actions">
 										<li><input type="submit" value="Send Message" class="special" /></li>
-										<li><input type="reset" value="Reset" /></li>
+										<li><button onclick="generateHandle()">Generate handle</button></li>
+
+									</ul>
+									<div>
 										<button onclick="generateHandle()">Generate handle</button>
 										<div class="field half first" id="handle"></div>
-									</ul>
+									</div>
 								</form>
 
 								<ul class="icons">
