@@ -138,16 +138,37 @@
 									</div>
 
 									<script>
+									// function generateHandle() {
+									// 	// List of possible animals to use in the handle
+									// 	const animals = ['panda', 'monkey', 'tiger', 'lion', 'unicorn', 'dragon', 'giraffe'];
+										
+									// 	// Generate a random handle using a random animal and a randomly generated word
+									// 	const handle = generateRandomWord() + '_' + animals[Math.floor(Math.random() * animals.length)];
+										
+									// 	// Display the handle in the page
+									// 	document.getElementById('handle').innerHTML = handle;
+									// }
+
 									function generateHandle() {
-										// List of possible animals to use in the handle
-										const animals = ['panda', 'monkey', 'tiger', 'lion', 'unicorn', 'dragon', 'giraffe'];
-										
-										// Generate a random handle using a random animal and a randomly generated word
-										const handle = generateRandomWord() + '_' + animals[Math.floor(Math.random() * animals.length)];
-										
-										// Display the handle in the page
-										document.getElementById('handle').innerHTML = handle;
+										// Retrieve the current handle value
+										var currentHandle = document.getElementById('handle').innerHTML;
+
+										// Check if the handle exists and is not empty
+										if (currentHandle && currentHandle.trim() !== '') {
+											// Handle exists and is not empty, so do nothing
+											return;
+										} else {
+											// List of possible animals to use in the handle
+											const animals = ['panda', 'monkey', 'tiger', 'lion', 'unicorn', 'dragon', 'giraffe'];
+											
+											// Generate a random handle using a random animal and a randomly generated word
+											const handle = generateRandomWord() + '_' + animals[Math.floor(Math.random() * animals.length)];
+											
+											// Display the handle in the page
+											document.getElementById('handle').innerHTML = handle;
+										}
 									}
+
 									
 									// Generates a random word by combining random consonants and vowels
 									function generateRandomWord() {
